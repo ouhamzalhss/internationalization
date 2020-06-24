@@ -21,6 +21,7 @@ public class PageController {
 @GetMapping("/international")
 public String getInternationalPage() {
     System.out.println(messageSource.getMessage("greeting", null, LocaleContextHolder.getLocale()));
+    System.out.println(messageSource.getMessage("code", null, LocaleContextHolder.getLocale()));
     return "international";
 }
 
