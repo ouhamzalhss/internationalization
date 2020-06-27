@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="ISO-8859-1" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
     <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="internationalization.js"></script>
 </head>
 <body>
-<h1 th:text="#{greeting}"></h1>
-<h1 th:text="#{code}"></h1>
 
-<br /><br />
-<span th:text="#{lang.change}"></span>:
-<select id="locales">
-    <option value=""></option>
-    <option value="en" th:text="#{lang.eng}"></option>
-    <option value="fr" th:text="#{lang.fr}"></option>
-</select>
+<div class="container">
+<div class="row">
+    <div class="col-md-11 alert alert-danger mt-2">
+        <h1  th:text="#{greeting}"></h1>
+        <p th:text="#{content}"></p>
+    </div>
+
+    <div class="col-md-1 mt-2">
+        <select id="locales">
+            <option value="" th:text="#{lang.change}"></option>
+            <option value="en" th:text="#{lang.eng}"></option>
+            <option value="fr" th:text="#{lang.fr}"></option>
+            <option value="es" th:text="#{lang.es}"></option>
+        </select>
+    </div>
+</div>
+</div>
+
+
 </body>
 </html>
